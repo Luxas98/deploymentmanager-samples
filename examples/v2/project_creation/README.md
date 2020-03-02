@@ -55,7 +55,7 @@ the user not having permissions.
     in Google Cloud Console . This will be called the "DM Service Account" for
     the rest of these instructions.
 
-    *   See https://cloud.google.com/resource-manager/docs/access-control-proj
+    *   See /
 
 1.  If you don't already have an Organization node under which you will create
     projects, then create one following [these
@@ -103,8 +103,7 @@ and their resources. Avoid creating other GCP resources in the Creation project.
 1.  Create the project. If using the CLI:
 
 
-    gcloud deployment-manager deployments create YOUR_DEPLOYMENT_NAME \
-        --config config.yaml
+    gcloud deployment-manager deployments create organization-1-deployment --config config.yaml
 
 **Note: Project names are globally unique, and cannot be reused. Make sure you
 have a good naming scheme before stamping out projects.**

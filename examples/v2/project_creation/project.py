@@ -31,6 +31,8 @@ def GenerateConfig(context):
   parent_type = ''
   parent_id = ''
 
+  print('TADAAAAA!')
+
   if 'parent-folder-id' in context.properties:
     parent_type = 'folder'
     parent_id = context.properties['parent-folder-id']
@@ -98,7 +100,6 @@ def GenerateConfig(context):
       svc_acct = 'serviceAccount:{}@cloudservices.gserviceaccount.com'.format(
         '$(ref.{}.projectNumber)'.format(project_id)
       )
-
       # Merge the default DM service account into the owner role if it exists
       owner_idx = [bind['role'] == 'roles/owner' for bind in policies_to_add]
       try:
@@ -141,6 +142,7 @@ def GenerateConfig(context):
           }
         }
     }])
+
   if context.properties.get('bucket-export-settings'):
     bucket_name = None
     action_dependency = [project_id,
